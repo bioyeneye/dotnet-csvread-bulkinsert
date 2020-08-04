@@ -12,28 +12,6 @@ namespace ReadCSVDbBulkInsert
 {
     public class CsvData
     {
-        private string _fileSavePath;
-        public CsvData(string fileSavePath)
-        {
-            _fileSavePath = fileSavePath;
-        }
-        
-        // public static IEnumerable<DataRow> GetData(string fileSavePath)
-        // {
-        //     var csvTable = new DataTable();
-        //     var stream = File.Open(fileSavePath, FileMode.Open, FileAccess.Read);
-        //     using (var csvReader = new CsvReader(new StreamReader(stream), true, ',', '"', '"', '#', LumenWorks.Framework.IO.Csv.ValueTrimmingOptions.All))
-        //     {
-        //         csvReader.MissingFieldAction = MissingFieldAction.ParseError;
-        //         csvReader.DefaultParseErrorAction = ParseErrorAction.RaiseEvent;
-        //         csvReader.SkipEmptyLines = true;
-        //         
-        //         csvTable.Load(csvReader);
-        //         var rows = from DataRow a in csvTable.Rows select a;
-        //         return rows;
-        //     }
-        // }
-        
         public static DataTable LoadCsvData(string refPath)
         {
             var result = new DataTable();

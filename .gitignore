@@ -444,3 +444,4 @@ src/ReadCSVDbBulkInsert/bin/*
 src/ReadCSVDbBulkInsert/obj/*
 
 src/.idea
+src/ReadCSVDbBulkInsert/.idea
