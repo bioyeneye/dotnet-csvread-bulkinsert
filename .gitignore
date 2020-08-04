@@ -442,3 +442,5 @@ src/.idea/caches/build_file_checksums.ser
 
 src/ReadCSVDbBulkInsert/bin/*
 src/ReadCSVDbBulkInsert/obj/*
+
+src/.idea
