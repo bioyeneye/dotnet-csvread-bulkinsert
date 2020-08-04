@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d1d1664-928a-4e2d-b399-be7f83cb8316" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.idea/.idea.ReadCSVDbBulkInsert/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.idea/.idea.ReadCSVDbBulkInsert/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.idea/.idea.ReadCSVDbBulkInsert/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.idea/.idea.ReadCSVDbBulkInsert/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.idea/.idea.ReadCSVDbBulkInsert/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/.idea/.idea.ReadCSVDbBulkInsert/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert.sln.DotSettings.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert/CSVData.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert/LumenWorks.Framework.IO.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert/ReadCSVDbBulkInsert.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReadCSVDbBulkInsert/ReadCSVDbBulkInsert/data.csv" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/889B4B2E-FB0C-414A-8011-F10B67790B96/9e/f6c3440f/CsvReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/20A19973-1B3F-48CA-ADED-3D97D3BA769D/88/4eebb07c/CsvReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6377584C-49D5-49F6-93E8-8F17475C7B0E/2D/DataTable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9EE8EE86-E367-481B-BF0E-11BEFE86882F/1/Interop.IOErrors.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ReadCSVDbBulkInsert/SoftCircuitsCsvParser.cs" />
+        <option value="$PROJECT_DIR$/ReadCSVDbBulkInsert/CsvDataParser.cs" />
+        <option value="$PROJECT_DIR$/ReadCSVDbBulkInsert/ReadCSVDbBulkInsert.csproj" />
+        <option value="$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs" />
+        <option value="$PROJECT_DIR$/ReadCSVDbBulkInsert/Program.cs" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fdyjpxJPdqJCHr6kOEApXyl1Ng" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3496708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29992685" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="settings.editor.selected.configurable" value="XamlPreviewOptionsPage" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ReadCSVDbBulkInsert" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ReadCSVDbBulkInsert/ReadCSVDbBulkInsert.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d1d1664-928a-4e2d-b399-be7f83cb8316" name="Default Changelist" comment="" />
+      <created>1596562402161</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596562402161</updated>
+      <workItem from="1596562422504" duration="1212000" />
+      <workItem from="1596567969658" duration="7309000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="372" y="211" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596572472994">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="372" y="211" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1596572472994" />
+    <state width="442" height="464" key="DebuggerActiveHint" timestamp="1596575748892">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="442" height="464" key="DebuggerActiveHint/0.23.1440.877@0.23.1440.877" timestamp="1596575748892" />
+    <state width="1398" height="265" key="GridCell.Tab.0.bottom" timestamp="1596578012383">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596578012383" />
+    <state width="1398" height="265" key="GridCell.Tab.0.center" timestamp="1596578012382">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1596578012382" />
+    <state width="1398" height="265" key="GridCell.Tab.0.left" timestamp="1596578012382">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1596578012382" />
+    <state width="1398" height="265" key="GridCell.Tab.0.right" timestamp="1596578012383">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1596578012383" />
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom" timestamp="1596578012384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596578012384" />
+    <state width="1398" height="265" key="GridCell.Tab.1.center" timestamp="1596578012384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1596578012384" />
+    <state width="1398" height="265" key="GridCell.Tab.1.left" timestamp="1596578012383">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1596578012383" />
+    <state width="1398" height="265" key="GridCell.Tab.1.right" timestamp="1596578012384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1596578012384" />
+    <state width="1398" height="265" key="GridCell.Tab.2.bottom" timestamp="1596578012385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.2.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596578012385" />
+    <state width="1398" height="265" key="GridCell.Tab.2.center" timestamp="1596578012384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.2.center/0.23.1440.877@0.23.1440.877" timestamp="1596578012384" />
+    <state width="1398" height="265" key="GridCell.Tab.2.left" timestamp="1596578012384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.2.left/0.23.1440.877@0.23.1440.877" timestamp="1596578012384" />
+    <state width="1398" height="265" key="GridCell.Tab.2.right" timestamp="1596578012384">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.2.right/0.23.1440.877@0.23.1440.877" timestamp="1596578012384" />
+    <state width="1398" height="265" key="GridCell.Tab.3.bottom" timestamp="1596578012385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.3.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596578012385" />
+    <state width="1398" height="265" key="GridCell.Tab.3.center" timestamp="1596578012385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.3.center/0.23.1440.877@0.23.1440.877" timestamp="1596578012385" />
+    <state width="1398" height="265" key="GridCell.Tab.3.left" timestamp="1596578012385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.3.left/0.23.1440.877@0.23.1440.877" timestamp="1596578012385" />
+    <state width="1398" height="265" key="GridCell.Tab.3.right" timestamp="1596578012385">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.3.right/0.23.1440.877@0.23.1440.877" timestamp="1596578012385" />
+    <state width="1398" height="265" key="GridCell.Tab.4.bottom" timestamp="1596578012387">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.4.bottom/0.23.1440.877@0.23.1440.877" timestamp="1596578012387" />
+    <state width="1398" height="265" key="GridCell.Tab.4.center" timestamp="1596578012386">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.4.center/0.23.1440.877@0.23.1440.877" timestamp="1596578012386" />
+    <state width="1398" height="265" key="GridCell.Tab.4.left" timestamp="1596578012386">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.4.left/0.23.1440.877@0.23.1440.877" timestamp="1596578012386" />
+    <state width="1398" height="265" key="GridCell.Tab.4.right" timestamp="1596578012387">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="265" key="GridCell.Tab.4.right/0.23.1440.877@0.23.1440.877" timestamp="1596578012387" />
+    <state x="320" y="141" key="Rider.ProjectTemplateDialog.Size" timestamp="1596565740034">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="141" key="Rider.ProjectTemplateDialog.Size/0.23.1440.877@0.23.1440.877" timestamp="1596565740034" />
+    <state x="221" y="41" key="SettingsEditor" timestamp="1596565621103">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="41" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1596565621103" />
+    <state width="720" height="379" key="XDebugger.FullValuePopup" timestamp="1596569767865">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="720" height="379" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1596569767865" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1596574640741">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1440.877@0.23.1440.877" timestamp="1596574640741" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReadCSVDbBulkInsert/Program.cs</url>
+          <line>10</line>
+          <properties documentPath="$PROJECT_DIR$/ReadCSVDbBulkInsert/Program.cs" initialLine="8">
+            <startOffsets>
+              <option value="181" />
+            </startOffsets>
+            <endOffsets>
+              <option value="224" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs" initialLine="18">
+            <startOffsets>
+              <option value="518" />
+            </startOffsets>
+            <endOffsets>
+              <option value="549" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs</url>
+          <line>30</line>
+          <properties documentPath="$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs" initialLine="22">
+            <startOffsets>
+              <option value="1067" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1092" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReadCSVDbBulkInsert/Program.cs</url>
+          <line>34</line>
+          <properties documentPath="$PROJECT_DIR$/ReadCSVDbBulkInsert/Program.cs" initialLine="9">
+            <startOffsets>
+              <option value="1172" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1192" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs</url>
+          <line>48</line>
+          <properties documentPath="$PROJECT_DIR$/ReadCSVDbBulkInsert/CSVData.cs" initialLine="48">
+            <startOffsets>
+              <option value="1837" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1858" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
