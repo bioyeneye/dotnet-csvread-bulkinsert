@@ -61,28 +61,45 @@ namespace ReadCSVDbBulkInsert
         }
 
         public static DataTable LoadCsvData(string refPath)
+        {
+            var result = new DataTable();
+            using (var sr = new StreamReader(refPath, Encoding.UTF8, false, 16384 * 2))
             {
-                var result = new DataTable();
-                using (var sr = new StreamReader(refPath, Encoding.UTF8, false, 16384 * 2))
+                using (var csv = new CsvReader(sr, CultureInfo.InvariantCulture))
                 {
-                    using (var csv = new CsvReader(sr, CultureInfo.InvariantCulture))
+                    csv.Configuration.Delimiter = ",";
+                    csv.Configuration.HasHeaderRecord = true;
+                    csv.Configuration.IgnoreQuotes = true;
+                    using (var dataRdr = new CsvDataReader(csv))
                     {
-                        csv.Configuration.Delimiter = ",";
-                        csv.Configuration.HasHeaderRecord = true;
-                        csv.Configuration.IgnoreQuotes = true;
-                        csv.Configuration.Escape = '"';
-                        csv.Configuration.BadDataFound = null;
-                        csv.Configuration.TrimOptions = TrimOptions.InsideQuotes | TrimOptions.Trim;
-                        using (var dataRdr = new CsvDataReader(csv))
+                        if (csv.Configuration.HasHeaderRecord)
                         {
-                            result.Load(dataRdr);
+                            csv.ReadHeader();
+
+                            foreach (var header in csv.Context.HeaderRecord)
+                            {
+                                var hearderWithoutQuotes = header.Trim('"');
+                                result.Columns.Add(hearderWithoutQuotes, typeof(string));
+                            }
+                        }
+
+                        while (csv.Read())
+                        {
+                            var row = result.NewRow();
+                            foreach (DataColumn column in result.Columns)
+                            {
+                                var data = csv.GetField(column.DataType, string.Format("\"{0}\"", column.ColumnName));
+                                row[column.ColumnName] = data.ToString().Trim('"');
+                            }
+
+                            result.Rows.Add(row);
                         }
                     }
                 }
-
-                return result;
             }
 
+            return result;
+        }
 
             public static void SqlBulkInsertWithAutoTableCreate(DataTable dataTable, string connectionString, string tableName)
             {
