@@ -70,9 +70,8 @@ namespace ReadCSVDbBulkInsert
                         csv.Configuration.Delimiter = ",";
                         csv.Configuration.HasHeaderRecord = true;
                         csv.Configuration.IgnoreQuotes = true;
-                        csv.Configuration.Escape = '"';
-                        csv.Configuration.BadDataFound = null;
-                        csv.Configuration.TrimOptions = TrimOptions.InsideQuotes | TrimOptions.Trim;
+                        csv.Configuration.Quote = '^';
+                        // csv.Configuration.TrimOptions = TrimOptions.InsideQuotes | TrimOptions.Trim;
                         using (var dataRdr = new CsvDataReader(csv))
                         {
                             result.Load(dataRdr);
