@@ -51,12 +51,12 @@ namespace ReadCSVDbBulkInsert
                         csvData.Rows.Add(fields);
                     }
                 }
-
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
             }
+
             return csvData;
         }
 
@@ -72,7 +72,6 @@ namespace ReadCSVDbBulkInsert
                     csv.Configuration.IgnoreQuotes = true;
                     using (var dataRdr = new CsvDataReader(csv))
                     {
-
                         if (csv.Configuration.HasHeaderRecord)
                         {
                             csv.ReadHeader();
@@ -102,86 +101,93 @@ namespace ReadCSVDbBulkInsert
             return result;
         }
 
-            public static void SqlBulkInsertWithAutoTableCreate(DataTable dataTable, string connectionString, string tableName)
+        public static void SqlBulkInsertWithAutoTableCreate(DataTable dataTable, string connectionString, string tableName)
+        {
+            using (var sqlConnection = new SqlConnection(connectionString))
             {
-                using (var sqlConnection = new SqlConnection(connectionString))
+                sqlConnection.Open();
+                var transaction = sqlConnection.BeginTransaction();
+
+                try
                 {
-                    sqlConnection.Open();
-                    var transaction = sqlConnection.BeginTransaction();
+                    dataTable.TableName = tableName;
 
-                    try
+                    // checking whether the table selected from the dataset exists in the database or not
+                    var checkTableIfExistsCommand = new SqlCommand("IF EXISTS (SELECT 1 FROM sysobjects WHERE name =  '" + dataTable.TableName + "') SELECT 1 ELSE SELECT 0", sqlConnection, transaction);
+                    var exists = checkTableIfExistsCommand.ExecuteScalar().ToString().Equals("1");
+
+                    // if does not exist
+                    if (!exists)
                     {
-                        dataTable.TableName = tableName;
+                        var createTableBuilder = new StringBuilder("CREATE TABLE [" + dataTable.TableName + "]");
+                        createTableBuilder.AppendLine("(");
 
-                        // checking whether the table selected from the dataset exists in the database or not
-                        var checkTableIfExistsCommand = new SqlCommand("IF EXISTS (SELECT 1 FROM sysobjects WHERE name =  '" + dataTable.TableName + "') SELECT 1 ELSE SELECT 0", sqlConnection, transaction);
-                        var exists = checkTableIfExistsCommand.ExecuteScalar().ToString().Equals("1");
+                        createTableBuilder.AppendLine($"{tableName}Id bigint IDENTITY(1,1),");
 
-                        // if does not exist
-                        if (!exists)
+                        // selecting each column of the datatable to create a table in the database
+                        foreach (DataColumn dc in dataTable.Columns)
                         {
-                            var createTableBuilder = new StringBuilder("CREATE TABLE [" + dataTable.TableName + "]");
-                            createTableBuilder.AppendLine("(");
-
-                            createTableBuilder.AppendLine($"{tableName}Id bigint IDENTITY(1,1),");
-
-                            // selecting each column of the datatable to create a table in the database
-                            foreach (DataColumn dc in dataTable.Columns)
+                            string dataType;
+                            switch (dc.DataType.Name)
                             {
-                                string dataType;
-                                switch (dc.DataType.Name)
-                                {
-                                    case "String":
-                                        dataType = " nvarchar(MAX) ";
-                                        break;
-                                    case "DateTime":
-                                        dataType = " nvarchar(MAX) ";
-                                        break;
-                                    case "Boolean":
-                                        dataType = " bit ";
-                                        break;
-                                    case "Int32":
-                                        dataType = " int ";
-                                        break;
-                                    case "Byte[]":
-                                        dataType = " varbinary(8000) ";
-                                        break;
-                                    default:
-                                        dataType = " nvarchar(MAX) ";
-                                        break;
-                                }
-
-                                createTableBuilder.AppendLine($"  [{dc.ColumnName}] {dataType},");
+                                case "String":
+                                    dataType = " nvarchar(MAX) ";
+                                    break;
+                                case "DateTime":
+                                    dataType = " nvarchar(MAX) ";
+                                    break;
+                                case "Boolean":
+                                    dataType = " bit ";
+                                    break;
+                                case "Int32":
+                                    dataType = " int ";
+                                    break;
+                                case "Byte[]":
+                                    dataType = " varbinary(8000) ";
+                                    break;
+                                default:
+                                    dataType = " nvarchar(MAX) ";
+                                    break;
                             }
 
-                            createTableBuilder.Remove(createTableBuilder.Length - 1, 1);
-                            createTableBuilder.AppendLine(")");
-
-                            var createTableCommand = new SqlCommand(createTableBuilder.ToString(), sqlConnection, transaction);
-                            createTableCommand.ExecuteNonQuery();
+                            createTableBuilder.AppendLine($"  [{dc.ColumnName}] {dataType},");
                         }
 
-                        // if table exists, just copy the data to the destination table in the database
-                        // copying the data from datatable to database table
-                        using (var bulkCopy = new SqlBulkCopy(sqlConnection, SqlBulkCopyOptions.Default, transaction))
-                        {
-                            bulkCopy.DestinationTableName = dataTable.TableName;
-                            bulkCopy.BatchSize = 100;
-                            bulkCopy.WriteToServer(dataTable.CreateDataReader());
-                        }
+                        createTableBuilder.Remove(createTableBuilder.Length - 1, 1);
+                        createTableBuilder.AppendLine(")");
 
-                        transaction.Commit();
+                        var createTableCommand = new SqlCommand(createTableBuilder.ToString(), sqlConnection, transaction);
+                        createTableCommand.ExecuteNonQuery();
                     }
-                    catch (Exception e)
+
+                    // if table exists, just copy the data to the destination table in the database
+                    // copying the data from datatable to database table
+                    using (var bulkCopy = new SqlBulkCopy(sqlConnection, SqlBulkCopyOptions.Default, transaction))
                     {
-                        Console.WriteLine(e);
-                        transaction.Rollback();
+                        bulkCopy.DestinationTableName = dataTable.TableName;
+                        bulkCopy.BatchSize = 1000;
+                        bulkCopy.NotifyAfter = 1000;
+                        bulkCopy.SqlRowsCopied += BulkCopyOnSqlRowsCopied;
+                        bulkCopy.WriteToServer(dataTable.CreateDataReader());
                     }
-                    finally
-                    {
-                        sqlConnection.Close();
-                    }
+
+                    transaction.Commit();
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    sqlConnection.Close();
                 }
             }
         }
+
+        private static void BulkCopyOnSqlRowsCopied(object sender, SqlRowsCopiedEventArgs e)
+        {
+            Console.WriteLine($"Rows copied: {e.RowsCopied}");
+        }
     }
+}
