@@ -122,8 +122,6 @@ namespace ReadCSVDbBulkInsert
                         var createTableBuilder = new StringBuilder("CREATE TABLE [" + dataTable.TableName + "]");
                         createTableBuilder.AppendLine("(");
 
-                        createTableBuilder.AppendLine($"{tableName}Id bigint IDENTITY(1,1),");
-
                         // selecting each column of the datatable to create a table in the database
                         foreach (DataColumn dc in dataTable.Columns)
                         {
@@ -154,6 +152,7 @@ namespace ReadCSVDbBulkInsert
                             createTableBuilder.AppendLine($"  [{columnName}] {dataType},");
                         }
 
+                        createTableBuilder.AppendLine($"{tableName}Id bigint IDENTITY(1,1),");
                         createTableBuilder.Remove(createTableBuilder.Length - 1, 1);
                         createTableBuilder.AppendLine(")");
 
