@@ -150,7 +150,8 @@ namespace ReadCSVDbBulkInsert
                                     break;
                             }
 
-                            createTableBuilder.AppendLine($"  [{dc.ColumnName}] {dataType},");
+                            var columnName = RemoveWhitespace(dc.ColumnName);
+                            createTableBuilder.AppendLine($"  [{columnName}] {dataType},");
                         }
 
                         createTableBuilder.Remove(createTableBuilder.Length - 1, 1);
@@ -166,6 +167,8 @@ namespace ReadCSVDbBulkInsert
                     {
                         bulkCopy.DestinationTableName = dataTable.TableName;
                         bulkCopy.BatchSize = 1000;
+                        
+                        //use this to keep track of the coping
                         bulkCopy.NotifyAfter = 1000;
                         bulkCopy.SqlRowsCopied += BulkCopyOnSqlRowsCopied;
                         bulkCopy.WriteToServer(dataTable.CreateDataReader());
@@ -188,6 +191,15 @@ namespace ReadCSVDbBulkInsert
         private static void BulkCopyOnSqlRowsCopied(object sender, SqlRowsCopiedEventArgs e)
         {
             Console.WriteLine($"Rows copied: {e.RowsCopied}");
+        }
+        
+        private static string RemoveWhitespace(string source)
+        {
+            return string.IsNullOrEmpty(source) 
+                ? source 
+                :  new string(source.ToCharArray()
+                    .Where(c => !char.IsWhiteSpace(c))
+                    .ToArray());
         }
     }
 }
